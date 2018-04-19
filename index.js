@@ -1,9 +1,16 @@
 //import libraray to help create a component
 import React from 'react';
-import ReactNative from 'react-native';
+import { AppRegistry, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 //create a component
-const App = () => <Text>Some shit</Text>;
+const App = () => (
+  <View>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
+);
 
 //render to device
-ReactNative.AppRegistry.registerComponent('albums', () => App);
+AppRegistry.registerComponent('albums', () => App);
